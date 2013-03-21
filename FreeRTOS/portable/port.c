@@ -639,6 +639,6 @@ unsigned char ucByte;
 
 	/* Provided library function for setting up the timer that will produce the
 	tick. */
-	OpenTimer1( T1_16BIT_RW & T1_SOURCE_INT & T1_PS_1_1 & T1_CCP1_T3_CCP2 );
+	OpenTimer1( T1_16BIT_RW & T1_SOURCE_INT & T1_PS_1_1 & T12_CCP1_T34_CCP2345 );
 }
 
