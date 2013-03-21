@@ -8,10 +8,39 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <itemPath>18f8722_g.lkr</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="include" displayName="include" projectFiles="true">
+          <itemPath>FreeRTOS/include/list.h</itemPath>
+          <itemPath>FreeRTOS/include/task.h</itemPath>
+          <itemPath>FreeRTOS/include/serial.h</itemPath>
+          <itemPath>FreeRTOS/include/FreeRTOS.h</itemPath>
+          <itemPath>FreeRTOS/include/StackMacros.h</itemPath>
+          <itemPath>FreeRTOS/include/croutine.h</itemPath>
+          <itemPath>FreeRTOS/include/semphr.h</itemPath>
+          <itemPath>FreeRTOS/include/mpu_wrappers.h</itemPath>
+          <itemPath>FreeRTOS/include/queue.h</itemPath>
+          <itemPath>FreeRTOS/include/portable.h</itemPath>
+          <itemPath>FreeRTOS/include/projdefs.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="portable" displayName="portable" projectFiles="true">
+          <itemPath>FreeRTOS/portable/heap_1.c</itemPath>
+          <itemPath>FreeRTOS/portable/portmacro.h</itemPath>
+          <itemPath>FreeRTOS/portable/port.c</itemPath>
+          <itemPath>FreeRTOS/portable/stdio.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="serial" displayName="serial" projectFiles="true">
+          <itemPath>FreeRTOS/serial/serial.c</itemPath>
+        </logicalFolder>
+        <itemPath>FreeRTOS/list.c</itemPath>
+        <itemPath>FreeRTOS/tasks.c</itemPath>
+        <itemPath>FreeRTOS/croutine.c</itemPath>
+        <itemPath>FreeRTOS/queue.c</itemPath>
+      </logicalFolder>
       <itemPath>newmain.c</itemPath>
       <itemPath>FreeRTOSConfig.h</itemPath>
     </logicalFolder>
@@ -62,7 +91,7 @@
         <property key="default-char-unsigned" value="false"/>
         <property key="enable-all-optimizations" value="true"/>
         <property key="enable-int-promotion" value="false"/>
-        <property key="enable-multi-bank-stack-model" value="false"/>
+        <property key="enable-multi-bank-stack-model" value="true"/>
         <property key="enable-ob" value="true"/>
         <property key="enable-od" value="true"/>
         <property key="enable-om" value="true"/>
