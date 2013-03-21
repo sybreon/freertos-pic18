@@ -5,16 +5,19 @@
  * Created on March 21, 2013, 8:11 PM
  */
 
-#include <FreeRTOSConfig.h>
-#include <p18f8722.h>
+/* Scheduler include files. */
+#include "FreeRTOS.h"
+#include "task.h"
+
 
 /*
  * 
  */
 void main(void) {
 
-    
 
+    /* Start the scheduler.  Will never return here. */
+    vTaskStartScheduler();
     return 0;
 }
 
