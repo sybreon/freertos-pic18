@@ -45,11 +45,11 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/newmain.o ${OBJECTDIR}/FreeRTOS/portable/heap_1.o ${OBJECTDIR}/FreeRTOS/portable/port.o ${OBJECTDIR}/FreeRTOS/list.o ${OBJECTDIR}/FreeRTOS/tasks.o ${OBJECTDIR}/FreeRTOS/croutine.o ${OBJECTDIR}/FreeRTOS/serial/serial.o ${OBJECTDIR}/FreeRTOS/queue.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/newmain.o.d ${OBJECTDIR}/FreeRTOS/portable/heap_1.o.d ${OBJECTDIR}/FreeRTOS/portable/port.o.d ${OBJECTDIR}/FreeRTOS/list.o.d ${OBJECTDIR}/FreeRTOS/tasks.o.d ${OBJECTDIR}/FreeRTOS/croutine.o.d ${OBJECTDIR}/FreeRTOS/serial/serial.o.d ${OBJECTDIR}/FreeRTOS/queue.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/FreeRTOS/portable/heap_1.o ${OBJECTDIR}/FreeRTOS/portable/port.o ${OBJECTDIR}/FreeRTOS/serial/serial.o ${OBJECTDIR}/FreeRTOS/list.o ${OBJECTDIR}/FreeRTOS/tasks.o ${OBJECTDIR}/FreeRTOS/croutine.o ${OBJECTDIR}/FreeRTOS/queue.o ${OBJECTDIR}/newmain.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/FreeRTOS/portable/heap_1.o.d ${OBJECTDIR}/FreeRTOS/portable/port.o.d ${OBJECTDIR}/FreeRTOS/serial/serial.o.d ${OBJECTDIR}/FreeRTOS/list.o.d ${OBJECTDIR}/FreeRTOS/tasks.o.d ${OBJECTDIR}/FreeRTOS/croutine.o.d ${OBJECTDIR}/FreeRTOS/queue.o.d ${OBJECTDIR}/newmain.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/newmain.o ${OBJECTDIR}/FreeRTOS/portable/heap_1.o ${OBJECTDIR}/FreeRTOS/portable/port.o ${OBJECTDIR}/FreeRTOS/list.o ${OBJECTDIR}/FreeRTOS/tasks.o ${OBJECTDIR}/FreeRTOS/croutine.o ${OBJECTDIR}/FreeRTOS/serial/serial.o ${OBJECTDIR}/FreeRTOS/queue.o
+OBJECTFILES=${OBJECTDIR}/FreeRTOS/portable/heap_1.o ${OBJECTDIR}/FreeRTOS/portable/port.o ${OBJECTDIR}/FreeRTOS/serial/serial.o ${OBJECTDIR}/FreeRTOS/list.o ${OBJECTDIR}/FreeRTOS/tasks.o ${OBJECTDIR}/FreeRTOS/croutine.o ${OBJECTDIR}/FreeRTOS/queue.o ${OBJECTDIR}/newmain.o
 
 
 CFLAGS=
@@ -80,118 +80,118 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/newmain.o: newmain.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/newmain.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/newmain.o   newmain.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/newmain.o 
-	@${FIXDEPS} "${OBJECTDIR}/newmain.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
 ${OBJECTDIR}/FreeRTOS/portable/heap_1.o: FreeRTOS/portable/heap_1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS/portable 
 	@${RM} ${OBJECTDIR}/FreeRTOS/portable/heap_1.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/portable/heap_1.o   FreeRTOS/portable/heap_1.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/portable/heap_1.o   FreeRTOS/portable/heap_1.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/portable/heap_1.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/portable/heap_1.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/portable/port.o: FreeRTOS/portable/port.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS/portable 
 	@${RM} ${OBJECTDIR}/FreeRTOS/portable/port.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/portable/port.o   FreeRTOS/portable/port.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/portable/port.o   FreeRTOS/portable/port.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/portable/port.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/portable/port.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/FreeRTOS/serial/serial.o: FreeRTOS/serial/serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/FreeRTOS/serial 
+	@${RM} ${OBJECTDIR}/FreeRTOS/serial/serial.o.d 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/serial/serial.o   FreeRTOS/serial/serial.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/serial/serial.o 
+	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/serial/serial.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/list.o: FreeRTOS/list.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS 
 	@${RM} ${OBJECTDIR}/FreeRTOS/list.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/list.o   FreeRTOS/list.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/list.o   FreeRTOS/list.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/list.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/list.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/tasks.o: FreeRTOS/tasks.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS 
 	@${RM} ${OBJECTDIR}/FreeRTOS/tasks.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/tasks.o   FreeRTOS/tasks.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/tasks.o   FreeRTOS/tasks.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/tasks.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/tasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/croutine.o: FreeRTOS/croutine.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS 
 	@${RM} ${OBJECTDIR}/FreeRTOS/croutine.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/croutine.o   FreeRTOS/croutine.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/croutine.o   FreeRTOS/croutine.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/croutine.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/croutine.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/FreeRTOS/serial/serial.o: FreeRTOS/serial/serial.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/FreeRTOS/serial 
-	@${RM} ${OBJECTDIR}/FreeRTOS/serial/serial.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/serial/serial.o   FreeRTOS/serial/serial.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/serial/serial.o 
-	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/serial/serial.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/queue.o: FreeRTOS/queue.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS 
 	@${RM} ${OBJECTDIR}/FreeRTOS/queue.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/queue.o   FreeRTOS/queue.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/queue.o   FreeRTOS/queue.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/queue.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/queue.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/newmain.o: newmain.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/newmain.o.d 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/newmain.o   newmain.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/newmain.o 
+	@${FIXDEPS} "${OBJECTDIR}/newmain.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
-${OBJECTDIR}/newmain.o: newmain.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/newmain.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/newmain.o   newmain.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/newmain.o 
-	@${FIXDEPS} "${OBJECTDIR}/newmain.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
 ${OBJECTDIR}/FreeRTOS/portable/heap_1.o: FreeRTOS/portable/heap_1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS/portable 
 	@${RM} ${OBJECTDIR}/FreeRTOS/portable/heap_1.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/portable/heap_1.o   FreeRTOS/portable/heap_1.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/portable/heap_1.o   FreeRTOS/portable/heap_1.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/portable/heap_1.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/portable/heap_1.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/portable/port.o: FreeRTOS/portable/port.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS/portable 
 	@${RM} ${OBJECTDIR}/FreeRTOS/portable/port.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/portable/port.o   FreeRTOS/portable/port.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/portable/port.o   FreeRTOS/portable/port.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/portable/port.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/portable/port.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/FreeRTOS/serial/serial.o: FreeRTOS/serial/serial.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/FreeRTOS/serial 
+	@${RM} ${OBJECTDIR}/FreeRTOS/serial/serial.o.d 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/serial/serial.o   FreeRTOS/serial/serial.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/serial/serial.o 
+	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/serial/serial.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/list.o: FreeRTOS/list.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS 
 	@${RM} ${OBJECTDIR}/FreeRTOS/list.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/list.o   FreeRTOS/list.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/list.o   FreeRTOS/list.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/list.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/list.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/tasks.o: FreeRTOS/tasks.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS 
 	@${RM} ${OBJECTDIR}/FreeRTOS/tasks.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/tasks.o   FreeRTOS/tasks.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/tasks.o   FreeRTOS/tasks.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/tasks.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/tasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/croutine.o: FreeRTOS/croutine.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS 
 	@${RM} ${OBJECTDIR}/FreeRTOS/croutine.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/croutine.o   FreeRTOS/croutine.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/croutine.o   FreeRTOS/croutine.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/croutine.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/croutine.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/FreeRTOS/serial/serial.o: FreeRTOS/serial/serial.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/FreeRTOS/serial 
-	@${RM} ${OBJECTDIR}/FreeRTOS/serial/serial.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/serial/serial.o   FreeRTOS/serial/serial.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/serial/serial.o 
-	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/serial/serial.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/FreeRTOS/queue.o: FreeRTOS/queue.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/FreeRTOS 
 	@${RM} ${OBJECTDIR}/FreeRTOS/queue.o.d 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/queue.o   FreeRTOS/queue.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/FreeRTOS/queue.o   FreeRTOS/queue.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/FreeRTOS/queue.o 
 	@${FIXDEPS} "${OBJECTDIR}/FreeRTOS/queue.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/newmain.o: newmain.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/newmain.o.d 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/include" -I"/home/sybreon/MPLABXProjects/RTOSC18.X/FreeRTOS/portable" -I"/home/sybreon/MPLABXProjects/RTOSC18.X" -ms -oa- -Ls -o-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/newmain.o   newmain.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/newmain.o 
+	@${FIXDEPS} "${OBJECTDIR}/newmain.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 
