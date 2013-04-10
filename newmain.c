@@ -15,7 +15,7 @@
 static void vTask1(void *pvParameters) {
     while (1) {
         LATD ^= 0x1;
-        vTaskDelay(1111);
+        vTaskDelay(1000);
     }
 }
 
